@@ -1,0 +1,30 @@
+{
+  "transcript_id": "chat_cho_t_i_1_th_ng_tin_20260729T170500444977",
+  "version": "v3",
+  "artifact_version": "v3+pb507661a6227+t21c47ca6e502",
+  "prompt_hash": "b507661a6227439261fc2e328e0031714baf960edc07c80d03d0c3a6dbd8bcee",
+  "tools_hash": "21c47ca6e502a18ba3cdc31934605ad46178c77e9ffc0611d694bbbfb0d4136a",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "created_at": "2026-07-29T17:05:05",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-07-29T17:05:00",
+      "user": "cho tôi 1 thông tin hữu ích ",
+      "status": "answered",
+      "assistant_text": "Xin lỗi, nhưng yêu cầu của bạn không nằm trong phạm vi của tôi. Tôi chỉ có thể cung cấp thông tin liên quan đến tin tức AI, nghiên cứu web, bài viết và nghiên cứu trên mạng xã hội. Nếu bạn có một yêu cầu cụ thể trong những lĩnh vực đó, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Xin lỗi, nhưng yêu cầu của bạn không nằm trong phạm vi của tôi. Tôi chỉ có thể cung cấp thông tin liên quan đến tin tức AI, nghiên cứu web, bài viết và nghiên cứu trên mạng xã hội. Nếu bạn có một yêu cầu cụ thể trong những lĩnh vực đó, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-07-29T17:05:05"
+    }
+  ],
+  "updated_at": "2026-07-29T17:05:05"
+}
