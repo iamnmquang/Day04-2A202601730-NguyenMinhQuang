@@ -32,6 +32,7 @@ class OpenAIProvider:
     ) -> ModelResponse:
         try:
             from openai import OpenAI
+            import httpx
         except ImportError as exc:
             raise RuntimeError("Install live provider dependency first: pip install openai") from exc
 
@@ -39,7 +40,9 @@ class OpenAIProvider:
         if not api_key:
             raise RuntimeError(f"Missing API key env var: {self.api_key_env}")
 
-        client = OpenAI(api_key=api_key, base_url=self.base_url)
+        # Create httpx client with SSL verification disabled for Windows
+        http_client = httpx.Client(verify=False)
+        client = OpenAI(api_key=api_key, base_url=self.base_url, http_client=http_client)
         kwargs: dict[str, Any] = {
             "model": model or self.default_model,
             "messages": messages,

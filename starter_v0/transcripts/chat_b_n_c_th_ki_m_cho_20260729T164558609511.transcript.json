@@ -1,0 +1,146 @@
+{
+  "transcript_id": "chat_b_n_c_th_ki_m_cho_20260729T164558609511",
+  "version": "v3",
+  "artifact_version": "v3+p16d45827fcb6+t21c47ca6e502",
+  "prompt_hash": "16d45827fcb6c9847224ce1227d0ea418d1c1d205f8cc6a06b6502be9c907816",
+  "tools_hash": "21c47ca6e502a18ba3cdc31934605ad46178c77e9ffc0611d694bbbfb0d4136a",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "created_at": "2026-07-29T16:46:10",
+  "turns": [
+    {
+      "turn_index": 2,
+      "started_at": "2026-07-29T16:45:58",
+      "user": "bạn có thể kiếm cho tôi chương trình ai thực chiên hiện đang có gì ko",
+      "status": "answered",
+      "assistant_text": "Hiện tại, có một số chương trình đào tạo AI thực chiến đang được triển khai, đặc biệt là từ Tập đoàn Vingroup. Dưới đây là một số thông tin chi tiết:\n\n1. **Vingroup khai giảng khoá đầu chương trình đào tạo AI thực chiến**  \n   - **Nguồn**: [theleader.vn](https://theleader.vn/vingroup-khai-giang-khoa-dau-tien-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-d45163.html)  \n   - **Tóm tắt**: Trường đại học VinUni đã chính thức khai giảng khóa đầu tiên của chương trình đào tạo 20.000 nhân tài AI thực chiến với 500 học viên tham gia. Chương trình này nhằm phát triển nguồn nhân lực chất lượng cao trong bối cảnh AI đang tái định hình nền kinh tế. Học viên sẽ được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp.\n\n2. **Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến**  \n   - **Nguồn**: [kinhtetieudung.vn](https://kinhtetieudung.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-a28460.html)  \n   - **Tóm tắt**: Chương trình này được thiết kế để học viên có thể làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Học viên sẽ được chia vào ba hướng đào tạo chuyên sâu: sản phẩm AI, hạ tầng AI và ứng dụng AI.\n\n3. **Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến**  \n   - **Nguồn**: [vtcnews.vn](https://vtcnews.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20-000-nhan-tai-ai-thuc-chien-ar1010818.html)  \n   - **Tóm tắt**: Chương trình kéo dài 12 tuần, bao gồm 3 tuần học nền tảng, 3 tuần mô phỏng thực chiến và 6 tuần làm việc trực tiếp tại doanh nghiệp. Học viên sẽ được hướng dẫn bởi các kỹ sư và chuyên gia trong hệ sinh thái Vingroup.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ chương trình nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "chương trình AI thực chiến",
+                "topic": "general"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "chương trình AI thực chiến",
+                "topic": "general"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "chương trình AI thực chiến",
+                "topic": "general",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "Vingroup khai giảng khoá đầu chương trình đào tạo AI thực chiến",
+                    "url": "https://theleader.vn/vingroup-khai-giang-khoa-dau-tien-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-d45163.html",
+                    "source": "theleader.vn",
+                    "summary": "Title: Vingroup khai giảng khoá đầu chương trình đào tạo AI thực chiến\n**Tạp chí điện tử Nhà quản trị - TheLEADER Magazine**. Cơ quan báo chí của Hội các Nhà quản trị doanh nghiệp Việt Nam - VACD. # Vingroup khai giảng khoá đầu tiên chương trình đào tạo 20.000 nhn tài AI thực chiến. Trường đại học VinUni chính thức khai giảng khóa đầu tiên của chương trình đào tạo 20.000 nhn tài AI thực chiến, với 500 học viên tham gia. 500 học viên đầu tiên chính thức gia nhập chương trình đào tạo 20.000 nhn tài AI thực chiến của Tập đoàn Vingroup. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Những học viên đầu tiên của chương trình đào tạo 20.000 nhn tài AI thực chiến tham dự lễ khai giảng tại Trường đại học VinUni sáng nay. Chương trình được thiết kế để học viên đồng thời rèn ba năng lực: biết tư duy sản phẩm - hiểu bài toán kinh doanh; sử dụng AI có trách nhiệm và quan trọng nhất là có kỹ năng AI đủ vững để làm được việc ngay sau khi tốt nghiệp. Đào Đức Minh - Phó tổng giám đốc Công ty VinSmart Future, Tập đoàn Vingroup cho biết: “Giá trị lớn của chương trình nằm ở chỗ học viên không chỉ học kiến thức mà được đặt vào một môi trường làm việc cường độ cao, áp lực cao và sát thực tế doanh nghiệp. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhn lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI.",
+                    "score": 0.8839694
+                  },
+                  {
+                    "title": "Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến",
+                    "url": "https://kinhtetieudung.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-a28460.html",
+                    "source": "kinhtetieudung.vn",
+                    "summary": "Title: Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến\n# Vingroup khai giảng Chương trình Đào tạo 20.000 Nhn tài AI thực chiến. ## Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến, với 500 học viên tham gia. **Đy là chương trình do Tập đoàn Vingroup triển khai nhằm phát triển nguồn nhn lực chất lượng cao trong bối cảnh trí tuệ nhn tạo (AI) đang tái định hình nền kinh tế, thị trường lao động và năng lực cạnh tranh quốc gia.**. 500 học viên đầu tiên chính thức gia nhập Chương trình Đào tạo 20.000 Nhn tài AI thực chiến của Tập đoàn Vingroup. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Sau giai đoạn nền tảng, học viên được chia vào 3 hướng đào tạo chuyên su: sản phẩm AI (AI Products); hạ tầng AI (AI Infrastructure) và ứng dụng AI (AI Applications). Những học vi&ecirc;n đầu ti&ecirc;n của Chương tr&igrave;nh Đ&agrave;o tạo 20.000 Nh&acirc;n t&agrave;i AI thực chiến tham dự Lễ Khai giảng tại Trường Đại học VinUni s&aacute;ng nay. Những học viên đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến tham dự Lễ Khai giảng tại Trường Đại học VinUni sáng nay. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhn lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI./.",
+                    "score": 0.87605256
+                  },
+                  {
+                    "title": "Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến",
+                    "url": "https://vtcnews.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20-000-nhan-tai-ai-thuc-chien-ar1010818.html",
+                    "source": "vtcnews.vn",
+                    "summary": "Title: Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến\n# Vingroup khai giảng Chương trình Đào tạo 20.000 Nhn tài AI thực chiến. ## Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến, với 500 học viên tham gia. Ngày 02/04/2026, Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến, với 500 học viên tham gia. Đy là chương trình do Tập đoàn Vingroup triển khai nhằm phát triển nguồn nhn lực chất lượng cao trong bối cảnh trí tuệ nhn tạo (AI) đang tái định hình nền kinh tế, thị trường lao động và năng lực cạnh tranh quốc gia. 500 học viên đầu tiên chính thức gia nhập Chương trình Đào tạo 20.000 Nhn tài AI thực chiến của Tập đoàn Vingroup. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Chương trình được thiết kế trong 12 tuần toàn thời gian theo mô hình 3+3+6, gồm: 3 tuần học nền tảng, 3 tuần mô phỏng thực chiến và 6 tuần làm việc trực tiếp tại doanh nghiệp. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Sau khi hoàn thành chương trình, học viên có cơ hội gia nhập các công ty trong hệ sinh thái Vingroup với mức thu nhập hấp dẫn dự kiến từ 20 – 50 triệu đồng/tháng, tùy theo năng lực thực tế. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhn lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI.",
+                    "score": 0.8668671
+                  },
+                  {
+                    "title": "Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến",
+                    "url": "https://kinhtedouong.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-131595.html",
+                    "source": "kinhtedouong.vn",
+                    "summary": "Title: Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến\n## Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhân tài AI thực chiến, với 500 học viên tham gia. 500 học viên đầu tiên chính thức gia nhập Chương trình Đào tạo 20.000 Nhân tài AI thực chiến của Tập đoàn Vingroup. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Chương trình được thiết kế để học viên đồng thời rèn ba năng lực: biết tư duy sản phẩm - hiểu bài toán kinh doanh; sử dụng AI có trách nhiệm và quan trọng nhất là có kỹ năng AI đủ vững để làm được việc ngay sau khi tốt nghiệp. Đào Đức Minh - Phó Tổng Giám đốc Công ty VinSmart Future, Tập đoàn Vingroup chia sẻ: “Giá trị lớn của chương trình nằm ở chỗ học viên không chỉ học kiến thức mà được đặt vào một môi trường làm việc cường độ cao, áp lực cao và sát thực tế doanh nghiệp. Sau khi hoàn thành chương trình, học viên có cơ hội gia nhập các công ty trong hệ sinh thái Vingroup với mức thu nhập hấp dẫn dự kiến từ 20 – 50 triệu đồng/tháng, tùy theo năng lực thực tế. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhân lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI./.",
+                    "score": 0.85967577
+                  },
+                  {
+                    "title": "Vingroup khai giảng khóa đầu tiên chương trình đào tạo 20.000 nhân tài AI thực chiến",
+                    "url": "https://vietq.vn/vingroup-khai-giang-khoa-dau-tien-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-d241116.html",
+                    "source": "vietq.vn",
+                    "summary": "Title: Vingroup khai giảng khóa đầu tiên chương trình đào tạo 20.000 nhân tài AI thực chiến\n# Vingroup khai giảng khóa đầu tiên chương trình đào tạo 20.000 nhn tài AI thực chiến. (VietQ.vn) - Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến, với 500 học viên tham gia. * ### Vingroup đào tạo 20.000 nhn tài AI thực chiến, phụ cấp 8 triệu đồng/tháng. *500 học viên đầu tiên chính thức gia nhập Chương trình Đào tạo 20.000 Nhn tài AI thực chiến của Tập đoàn Vingroup.*. Đy là chương trình do Tập đoàn Vingroup triển khai nhằm phát triển nguồn nhn lực chất lượng cao trong bối cảnh trí tuệ nhn tạo (AI) đang tái định hình nền kinh tế, thị trường lao động và năng lực cạnh tranh quốc gia. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Sau giai đoạn nền tảng, học viên được chia vào 3 hướng đào tạo chuyên su: sản phẩm AI (AI Products); hạ tầng AI (AI Infrastructure) và ứng dụng AI (AI Applications). *Những học viên đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến tham dự Lễ Khai giảng tại Trường Đại học VinUni sáng nay.*. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhn lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI. **Từ khóa:**Trường Đại học VinUni, khai giảng, khóa đầu tiên, Chương trình Đào tạo, Nhn tài AI, thực chiến, học viên.",
+                    "score": 0.85967577
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Hiện tại, có một số chương trình đào tạo AI thực chiến đang được triển khai, đặc biệt là từ Tập đoàn Vingroup. Dưới đây là một số thông tin chi tiết:\n\n1. **Vingroup khai giảng khoá đầu chương trình đào tạo AI thực chiến**  \n   - **Nguồn**: [theleader.vn](https://theleader.vn/vingroup-khai-giang-khoa-dau-tien-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-d45163.html)  \n   - **Tóm tắt**: Trường đại học VinUni đã chính thức khai giảng khóa đầu tiên của chương trình đào tạo 20.000 nhân tài AI thực chiến với 500 học viên tham gia. Chương trình này nhằm phát triển nguồn nhân lực chất lượng cao trong bối cảnh AI đang tái định hình nền kinh tế. Học viên sẽ được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp.\n\n2. **Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến**  \n   - **Nguồn**: [kinhtetieudung.vn](https://kinhtetieudung.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-a28460.html)  \n   - **Tóm tắt**: Chương trình này được thiết kế để học viên có thể làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Học viên sẽ được chia vào ba hướng đào tạo chuyên sâu: sản phẩm AI, hạ tầng AI và ứng dụng AI.\n\n3. **Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến**  \n   - **Nguồn**: [vtcnews.vn](https://vtcnews.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20-000-nhan-tai-ai-thuc-chien-ar1010818.html)  \n   - **Tóm tắt**: Chương trình kéo dài 12 tuần, bao gồm 3 tuần học nền tảng, 3 tuần mô phỏng thực chiến và 6 tuần làm việc trực tiếp tại doanh nghiệp. Học viên sẽ được hướng dẫn bởi các kỹ sư và chuyên gia trong hệ sinh thái Vingroup.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ chương trình nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "chương trình AI thực chiến",
+            "topic": "general"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "chương trình AI thực chiến",
+            "topic": "general",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "Vingroup khai giảng khoá đầu chương trình đào tạo AI thực chiến",
+                "url": "https://theleader.vn/vingroup-khai-giang-khoa-dau-tien-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-d45163.html",
+                "source": "theleader.vn",
+                "summary": "Title: Vingroup khai giảng khoá đầu chương trình đào tạo AI thực chiến\n**Tạp chí điện tử Nhà quản trị - TheLEADER Magazine**. Cơ quan báo chí của Hội các Nhà quản trị doanh nghiệp Việt Nam - VACD. # Vingroup khai giảng khoá đầu tiên chương trình đào tạo 20.000 nhn tài AI thực chiến. Trường đại học VinUni chính thức khai giảng khóa đầu tiên của chương trình đào tạo 20.000 nhn tài AI thực chiến, với 500 học viên tham gia. 500 học viên đầu tiên chính thức gia nhập chương trình đào tạo 20.000 nhn tài AI thực chiến của Tập đoàn Vingroup. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Những học viên đầu tiên của chương trình đào tạo 20.000 nhn tài AI thực chiến tham dự lễ khai giảng tại Trường đại học VinUni sáng nay. Chương trình được thiết kế để học viên đồng thời rèn ba năng lực: biết tư duy sản phẩm - hiểu bài toán kinh doanh; sử dụng AI có trách nhiệm và quan trọng nhất là có kỹ năng AI đủ vững để làm được việc ngay sau khi tốt nghiệp. Đào Đức Minh - Phó tổng giám đốc Công ty VinSmart Future, Tập đoàn Vingroup cho biết: “Giá trị lớn của chương trình nằm ở chỗ học viên không chỉ học kiến thức mà được đặt vào một môi trường làm việc cường độ cao, áp lực cao và sát thực tế doanh nghiệp. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhn lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI.",
+                "score": 0.8839694
+              },
+              {
+                "title": "Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến",
+                "url": "https://kinhtetieudung.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-a28460.html",
+                "source": "kinhtetieudung.vn",
+                "summary": "Title: Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến\n# Vingroup khai giảng Chương trình Đào tạo 20.000 Nhn tài AI thực chiến. ## Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến, với 500 học viên tham gia. **Đy là chương trình do Tập đoàn Vingroup triển khai nhằm phát triển nguồn nhn lực chất lượng cao trong bối cảnh trí tuệ nhn tạo (AI) đang tái định hình nền kinh tế, thị trường lao động và năng lực cạnh tranh quốc gia.**. 500 học viên đầu tiên chính thức gia nhập Chương trình Đào tạo 20.000 Nhn tài AI thực chiến của Tập đoàn Vingroup. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Sau giai đoạn nền tảng, học viên được chia vào 3 hướng đào tạo chuyên su: sản phẩm AI (AI Products); hạ tầng AI (AI Infrastructure) và ứng dụng AI (AI Applications). Những học vi&ecirc;n đầu ti&ecirc;n của Chương tr&igrave;nh Đ&agrave;o tạo 20.000 Nh&acirc;n t&agrave;i AI thực chiến tham dự Lễ Khai giảng tại Trường Đại học VinUni s&aacute;ng nay. Những học viên đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến tham dự Lễ Khai giảng tại Trường Đại học VinUni sáng nay. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhn lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI./.",
+                "score": 0.87605256
+              },
+              {
+                "title": "Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến",
+                "url": "https://vtcnews.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20-000-nhan-tai-ai-thuc-chien-ar1010818.html",
+                "source": "vtcnews.vn",
+                "summary": "Title: Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến\n# Vingroup khai giảng Chương trình Đào tạo 20.000 Nhn tài AI thực chiến. ## Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến, với 500 học viên tham gia. Ngày 02/04/2026, Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến, với 500 học viên tham gia. Đy là chương trình do Tập đoàn Vingroup triển khai nhằm phát triển nguồn nhn lực chất lượng cao trong bối cảnh trí tuệ nhn tạo (AI) đang tái định hình nền kinh tế, thị trường lao động và năng lực cạnh tranh quốc gia. 500 học viên đầu tiên chính thức gia nhập Chương trình Đào tạo 20.000 Nhn tài AI thực chiến của Tập đoàn Vingroup. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Chương trình được thiết kế trong 12 tuần toàn thời gian theo mô hình 3+3+6, gồm: 3 tuần học nền tảng, 3 tuần mô phỏng thực chiến và 6 tuần làm việc trực tiếp tại doanh nghiệp. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Sau khi hoàn thành chương trình, học viên có cơ hội gia nhập các công ty trong hệ sinh thái Vingroup với mức thu nhập hấp dẫn dự kiến từ 20 – 50 triệu đồng/tháng, tùy theo năng lực thực tế. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhn lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI.",
+                "score": 0.8668671
+              },
+              {
+                "title": "Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến",
+                "url": "https://kinhtedouong.vn/vingroup-khai-giang-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-131595.html",
+                "source": "kinhtedouong.vn",
+                "summary": "Title: Vingroup khai giảng Chương trình Đào tạo 20.000 Nhân tài AI thực chiến\n## Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhân tài AI thực chiến, với 500 học viên tham gia. 500 học viên đầu tiên chính thức gia nhập Chương trình Đào tạo 20.000 Nhân tài AI thực chiến của Tập đoàn Vingroup. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Chương trình được thiết kế để học viên đồng thời rèn ba năng lực: biết tư duy sản phẩm - hiểu bài toán kinh doanh; sử dụng AI có trách nhiệm và quan trọng nhất là có kỹ năng AI đủ vững để làm được việc ngay sau khi tốt nghiệp. Đào Đức Minh - Phó Tổng Giám đốc Công ty VinSmart Future, Tập đoàn Vingroup chia sẻ: “Giá trị lớn của chương trình nằm ở chỗ học viên không chỉ học kiến thức mà được đặt vào một môi trường làm việc cường độ cao, áp lực cao và sát thực tế doanh nghiệp. Sau khi hoàn thành chương trình, học viên có cơ hội gia nhập các công ty trong hệ sinh thái Vingroup với mức thu nhập hấp dẫn dự kiến từ 20 – 50 triệu đồng/tháng, tùy theo năng lực thực tế. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhân lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI./.",
+                "score": 0.85967577
+              },
+              {
+                "title": "Vingroup khai giảng khóa đầu tiên chương trình đào tạo 20.000 nhân tài AI thực chiến",
+                "url": "https://vietq.vn/vingroup-khai-giang-khoa-dau-tien-chuong-trinh-dao-tao-20000-nhan-tai-ai-thuc-chien-d241116.html",
+                "source": "vietq.vn",
+                "summary": "Title: Vingroup khai giảng khóa đầu tiên chương trình đào tạo 20.000 nhân tài AI thực chiến\n# Vingroup khai giảng khóa đầu tiên chương trình đào tạo 20.000 nhn tài AI thực chiến. (VietQ.vn) - Trường Đại học VinUni chính thức khai giảng khóa đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến, với 500 học viên tham gia. * ### Vingroup đào tạo 20.000 nhn tài AI thực chiến, phụ cấp 8 triệu đồng/tháng. *500 học viên đầu tiên chính thức gia nhập Chương trình Đào tạo 20.000 Nhn tài AI thực chiến của Tập đoàn Vingroup.*. Đy là chương trình do Tập đoàn Vingroup triển khai nhằm phát triển nguồn nhn lực chất lượng cao trong bối cảnh trí tuệ nhn tạo (AI) đang tái định hình nền kinh tế, thị trường lao động và năng lực cạnh tranh quốc gia. Theo khảo sát đầu vào, hơn 90% học viên tham gia chương trình với mục tiêu được làm việc trong các dự án thực tế và tìm kiếm cơ hội việc làm sau đào tạo. Sau giai đoạn nền tảng, học viên được chia vào 3 hướng đào tạo chuyên su: sản phẩm AI (AI Products); hạ tầng AI (AI Infrastructure) và ứng dụng AI (AI Applications). *Những học viên đầu tiên của Chương trình Đào tạo 20.000 Nhn tài AI thực chiến tham dự Lễ Khai giảng tại Trường Đại học VinUni sáng nay.*. Trong giai đoạn cuối, học viên làm việc toàn thời gian trong các dự án thực tế tại doanh nghiệp, dưới sự hướng dẫn trực tiếp của các kỹ sư và chuyên gia công nghệ trong hệ sinh thái Vingroup. Xuyên suốt chương trình, học viên được đào tạo để phát triển và triển khai các giải pháp AI trong doanh nghiệp, trong đó có mô hình AI Agent. Với cách tiếp cận tinh gọn, cường độ cao và gắn chặt với môi trường doanh nghiệp, chương trình hướng tới đào tạo một thế hệ nhn lực AI mới: có kỹ năng vững, thích ứng nhanh và sẵn sàng tham gia giải quyết các bài toán lớn của nền kinh tế AI. **Từ khóa:**Trường Đại học VinUni, khai giảng, khóa đầu tiên, Chương trình Đào tạo, Nhn tài AI, thực chiến, học viên.",
+                "score": 0.85967577
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-07-29T16:46:10"
+    }
+  ],
+  "updated_at": "2026-07-29T16:46:10"
+}

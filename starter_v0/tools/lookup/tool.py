@@ -21,6 +21,7 @@ def web_search(query: str = "", topic: str = "general", timeframe: str | None = 
             json=body,
             headers={"Authorization": f"Bearer {key}"},
             timeout=TIMEOUT,
+            verify=False,  # Temporarily disabled for Windows SSL issues
         )
         response.raise_for_status()
         data = response.json()
