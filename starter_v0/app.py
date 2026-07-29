@@ -271,7 +271,7 @@ def render_sidebar():
     )
     
     # Number of results (max 5 from Tavily free tier)
-    num_results = st.sidebar.slider("So ket qua", 1, 5, 3)
+    num_results = st.sidebar.slider("Số kết quả", 1, 5, 3)
     
     st.sidebar.divider()
     

@@ -13,9 +13,19 @@ def web_search(query: str = "", topic: str = "general", timeframe: str | None = 
         key = os.getenv("TAVILY_API_KEY")
         if not key:
             raise RuntimeError("Missing TAVILY_API_KEY env var")
+        
+        # Map app timeframe values to Tavily API values
+        timeframe_map = {
+            "Today": "day",
+            "Last 7 days": "week",
+            "Last 30 days": "month",
+            "All time": None,
+        }
+        tavily_timeframe = timeframe_map.get(timeframe, "week")
+        
         body: dict[str, Any] = {"query": query, "topic": topic, "max_results": int(max_results or 5), "search_depth": "basic"}
-        if timeframe:
-            body["time_range"] = timeframe
+        if tavily_timeframe:
+            body["time_range"] = tavily_timeframe
         response = requests.post(
             "https://api.tavily.com/search",
             json=body,
