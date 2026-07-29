@@ -179,3 +179,11 @@ UI is core deliverable, not bonus. Do not list it here.
   4. 3 tool mới (`summarize_news`, `source_dedupe`, `citation_check`) chưa được đưa vào
      eval case nào; vòng sau nên thêm case đo riêng chuỗi lookup → source_dedupe →
      citation_check → format
+## Phụ lục — Phân chia công việc
+
+| Vai trò | Phụ trách | Deliverables |
+|---|---|---|
+| Nguyễn Minh Quang 2A202601730 — Leader / Core Agent | Setup provider + preflight, chạy baseline v0, đọc `runs/*.json` (`failures`, `observed_mismatch`, `actual_tool_calls`), tối ưu qua v1→v3 (chỉ sửa `system_prompt.md` + `tools.yaml`), ghi version log | `artifacts/system_prompt.md`, `artifacts/tools.yaml`, `artifacts/version_log.csv`, `runs/v0–v3_B_base_*.json` |
+| Lê Minh Đạt 2A202601088 — Tool Engineer | Viết 3 tool mới cho luồng digest: `summarize_news` (rút gọn tin), `source_dedupe` (lọc trùng nguồn), `citation_check` (kiểm tra metadata trích dẫn). Mỗi tool gồm `tool.py` + `TOOL.md`, đăng ký `tools/__init__.py`, khai báo `tools.yaml`, smoke test trực tiếp | `tools/summarize_news/`, `tools/source_dedupe/`, `tools/citation_check/`, cập nhật `tools.yaml` |
+| Lệnh Quang Hưng 2A202601546 — Evaluation + Report | Thiết kế 10 team eval case (5 single-turn G01–G05, 5 multi-turn M01–M05) phủ đủ 6 `failure_type`; chạy group eval; tổng hợp metric, failure analysis và reflection từ log thật | `data/eval_group.json`, `artifacts/REPORT.md`, `runs/*_group_*.json` |
+| Hồ Quang Minh 2A202601906 — UI + Integration | Xây UI Streamlit: chat, response, tool trace (tên tool + args + result/error theo từng round), badge artifact version, lưu transcript; deploy link tạm qua Cloudflare Tunnel | `app.py`, `requirements.txt`, `transcripts/*.transcript.json` |
