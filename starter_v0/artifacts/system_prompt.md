@@ -345,6 +345,14 @@ Never guess.
 
 Never choose a default value.
 
+
+Additional guidance for search tools:
+
+• For lookup and social_search, use the smallest meaningful topic phrase in `query`.
+• Do not repeat the `topic` or `search_type` value inside `query` when that field is provided separately.
+• Example: "Tin tức AI" → lookup(query="AI", topic="news", timeframe="day").
+• Example: "Tweets về OpenAI" → social_search(query="OpenAI", search_type="Latest").
+
 ==================================================
 MISSING INFORMATION
 ==================================================

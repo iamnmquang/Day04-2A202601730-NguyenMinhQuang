@@ -103,7 +103,7 @@ tools:
         query:
           type: string
           default: ""
-          description: Search keywords.
+          description: Search keywords. Use the main topic only and do not repeat the search type.
 
         search_type:
           type: string
@@ -147,7 +147,7 @@ tools:
         query:
           type: string
           default: ""
-          description: Search query.
+          description: Search query. Use the main subject only. Do not repeat the topic label when `topic` is already set.
 
         topic:
           type: string
