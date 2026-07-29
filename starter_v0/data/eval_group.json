@@ -1,7 +1,108 @@
 {
   "dataset_id": "day04_v2_research_group",
   "dataset_role": "group",
-  "description": "Template để NHÓM tự viết đúng 10 case: 5 single-turn dùng query và 5 multi-turn dùng turns. Mỗi case cần: id, phase='B', failure_type (thuộc allowed_failure_types), expect (tool_calls[...] hoặc no_tool=true), và metadata.what_it_tests. File để trống có chủ đích vì mỗi nhóm phải tự thiết kế các case này.",
+  "description": "10 case do nhóm tự viết cho agent AI News Digest (lookup -> fetch -> format): routing đúng tool, đúng args (topic/timeframe/template), hỏi lại khi thiếu chủ đề, xác nhận trước khi đăng, không gọi tool thừa và từ chối câu ngoài phạm vi. Chấm trên tool_calls + args (subset). 5 single-turn + 5 multi-turn.",
   "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
-  "cases": []
+  "cases": [
+    {
+      "id": "G01_digest_timeframe",
+      "phase": "B", "suite": "group",
+      "query": "Làm cho mình bản tin AI hôm nay",
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"query": "AI", "topic": "news", "timeframe": "day"}}]},
+      "metadata": {"skill": "arg_news_timeframe_day", "difficulty": "medium", "what_it_tests": "Yêu cầu bản tin trong ngày → lookup với topic=news và timeframe=day, không để mặc định general/week."}
+    },
+    {
+      "id": "G02_read_given_url",
+      "phase": "B", "suite": "group",
+      "query": "Đọc kỹ bài này rồi tóm tắt cho mình: https://openai.com/blog/gpt-5",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "fetch", "args": {"url": "https://openai.com/blog/gpt-5"}}]},
+      "metadata": {"skill": "routing_read_url_not_search", "difficulty": "easy", "what_it_tests": "Đã có URL cụ thể → fetch đúng link đó, KHÔNG lookup lại trên web."}
+    },
+    {
+      "id": "G03_missing_topic",
+      "phase": "B", "suite": "group",
+      "query": "Làm bản tin giúp mình với",
+      "failure_type": "missing_info",
+      "expect": {"tool_calls": [{"name": "clarify", "args": {"response_type": "text"}}]},
+      "metadata": {"skill": "clarify_missing_topic", "difficulty": "medium", "what_it_tests": "Thiếu chủ đề bản tin → clarify xin chủ đề, KHÔNG tự đoán 'AI' rồi lookup."}
+    },
+    {
+      "id": "G04_out_of_scope_regex",
+      "phase": "B", "suite": "group",
+      "query": "Viết hộ mình regex validate email trong Python",
+      "failure_type": "out_of_scope",
+      "expect": {"no_tool": true, "behavior": "refuse"},
+      "metadata": {"skill": "out_of_scope_coding", "difficulty": "easy", "what_it_tests": "Câu coding ngoài phạm vi tin tức/research → KHÔNG gọi tool, từ chối và định hướng lại."}
+    },
+    {
+      "id": "G05_confirm_before_publish",
+      "phase": "B", "suite": "group",
+      "query": "Xuất bản bản tin này lên kênh của team ngay đi",
+      "failure_type": "wrong_boundary",
+      "expect": {"tool_calls": [{"name": "clarify", "args": {"response_type": "yes_no"}}]},
+      "metadata": {"skill": "confirm_before_publish", "difficulty": "medium", "what_it_tests": "Hành động xuất bản ra ngoài → clarify yes_no để xác nhận trước, không tự đăng."}
+    },
+    {
+      "id": "M01_change_timeframe",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Bản tin AI hôm nay có gì?"},
+        {"role": "user", "content": "Đổi sang tin cả tuần đi"},
+        {"role": "user", "content": "Vẫn giữ chủ đề AI nhé"}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"query": "AI", "topic": "news", "timeframe": "week"}}]},
+      "metadata": {"skill": "multiturn_timeframe_correction", "difficulty": "hard", "what_it_tests": "3 turns: sửa timeframe day→week, carry query=AI và topic=news từ lượt đầu."}
+    },
+    {
+      "id": "M02_clarify_then_topic",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Làm bản tin giúp mình"},
+        {"role": "user", "content": "Chủ đề robotics"},
+        {"role": "user", "content": "Chỉ lấy tin trong ngày thôi"}
+      ],
+      "failure_type": "missing_info",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"query": "robotics", "topic": "news", "timeframe": "day"}}]},
+      "metadata": {"skill": "multiturn_fill_after_clarify", "difficulty": "hard", "what_it_tests": "3 turns: sau khi được bổ sung chủ đề robotics và mốc thời gian, chuyển sang lookup thật thay vì clarify tiếp."}
+    },
+    {
+      "id": "M03_switch_to_url",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Tìm giúp mình tin về Gemini"},
+        {"role": "user", "content": "Thôi khỏi tìm, mình có link rồi: https://blog.google/gemini"},
+        {"role": "user", "content": "Chỉ đọc đúng link đó thôi"}
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "fetch", "args": {"url": "https://blog.google/gemini"}}]},
+      "metadata": {"skill": "multiturn_switch_search_to_url", "difficulty": "hard", "what_it_tests": "3 turns: user hủy tìm kiếm và đưa URL → chuyển từ lookup sang fetch, không gọi kèm lookup."}
+    },
+    {
+      "id": "M04_cancel_search",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Tìm tin AI hôm nay cho mình"},
+        {"role": "user", "content": "Thôi khỏi tìm nữa"},
+        {"role": "user", "content": "Cho mình biết bạn làm được những gì"}
+      ],
+      "failure_type": "unnecessary_tool",
+      "expect": {"no_tool": true, "behavior": "answer_without_tool"},
+      "metadata": {"skill": "multiturn_cancel_then_meta", "difficulty": "medium", "what_it_tests": "3 turns: yêu cầu tìm đã bị hủy, latest turn là câu hỏi meta → trả lời thẳng, KHÔNG gọi tool."}
+    },
+    {
+      "id": "M05_format_only",
+      "phase": "B", "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Tìm 5 tin AI hôm nay"},
+        {"role": "user", "content": "Kết quả có rồi, đủ dùng"},
+        {"role": "user", "content": "Trình bày lại thành dạng bullet gọn hơn"}
+      ],
+      "failure_type": "unnecessary_tool",
+      "expect": {"tool_calls": [{"name": "format", "args": {"template": "bullets"}}]},
+      "metadata": {"skill": "multiturn_format_without_researching_again", "difficulty": "hard", "what_it_tests": "3 turns: dữ liệu đã có sẵn, chỉ cần format template=bullets; gọi lại lookup là tool thừa."}
+    }
+  ]
 }
