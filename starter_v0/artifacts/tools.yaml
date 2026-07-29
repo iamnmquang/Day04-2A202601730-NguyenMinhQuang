@@ -254,6 +254,112 @@ tools:
         - template
 
   # -------------------------------------------------------------------
+  # Citation Check
+  # -------------------------------------------------------------------
+
+  - name: citation_check
+    description: "Kiểm tra metadata trích dẫn của các item trước khi format bản tin."
+    parameters:
+      type: object
+      properties:
+        items:
+          type: array
+          default: []
+          description: "Danh sách item tin tức cần kiểm tra"
+          items:
+            type: object
+            properties:
+              title: {type: string, default: "", description: "Tiêu đề"}
+              url: {type: string, default: "", description: "Đường dẫn nguồn"}
+              source: {type: string, default: "", description: "Tên nguồn"}
+              summary: {type: string, default: "", description: "Tóm tắt"}
+              section: {type: string, default: "", description: "Chủ đề"}
+        required_fields:
+          type: array
+          default: [title, url, source, summary]
+          items: {type: string}
+          description: "Các trường phải có để xem là citation đủ"
+        max_issues:
+          type: integer
+          default: 20
+          description: "Số lỗi/cảnh báo tối đa trả về"
+      required: [items]
+
+  # -------------------------------------------------------------------
+  # Source Dedupe
+  # -------------------------------------------------------------------
+
+  - name: source_dedupe
+    description: "Loại bỏ item tin tức trùng nhau và giới hạn số item từ cùng một nguồn trước khi format."
+    parameters:
+      type: object
+      properties:
+        items:
+          type: array
+          default: []
+          description: "Danh sách item tin tức cần lọc trùng"
+          items:
+            type: object
+            properties:
+              title: {type: string, default: "", description: "Tiêu đề"}
+              url: {type: string, default: "", description: "Đường dẫn nguồn"}
+              source: {type: string, default: "", description: "Tên nguồn"}
+              summary: {type: string, default: "", description: "Tóm tắt"}
+              section: {type: string, default: "", description: "Chủ đề"}
+        dedupe_by:
+          type: array
+          default: [url, title]
+          items: {type: string}
+          description: "Tiêu chí dùng để phát hiện trùng"
+        keep_per_source:
+          type: integer
+          default: 2
+          description: "Số item tối đa giữ lại cho mỗi source bucket"
+        max_issues:
+          type: integer
+          default: 20
+          description: "Số duplicate/issue tối đa trả về"
+      required: [items]
+
+  # -------------------------------------------------------------------
+  # Summarize News
+  # -------------------------------------------------------------------
+
+  - name: summarize_news
+    description: "Rút gọn nội dung tin tức thành summary ngắn, phù hợp để ghép bản tin cuối."
+    parameters:
+      type: object
+      properties:
+        items:
+          type: array
+          default: []
+          description: "Danh sách item tin tức đã lookup hoặc fetch"
+          items:
+            type: object
+            properties:
+              title: {type: string, default: "", description: "Tiêu đề"}
+              url: {type: string, default: "", description: "Đường dẫn nguồn"}
+              source: {type: string, default: "", description: "Tên nguồn"}
+              summary: {type: string, default: "", description: "Tóm tắt hoặc đoạn nội dung"}
+              content: {type: string, default: "", description: "Nội dung dài"}
+              body: {type: string, default: "", description: "Nội dung dài"}
+              text: {type: string, default: "", description: "Nội dung dài"}
+              section: {type: string, default: "", description: "Chủ đề"}
+        max_sentences:
+          type: integer
+          default: 2
+          description: "Số câu tối đa giữ lại cho mỗi item"
+        max_chars:
+          type: integer
+          default: 360
+          description: "Số ký tự tối đa cho summary cuối"
+        max_points:
+          type: integer
+          default: 3
+          description: "Số ý chính tối đa trả về cho mỗi item"
+      required: [items]
+
+  # -------------------------------------------------------------------
   # Send
   # -------------------------------------------------------------------
 
